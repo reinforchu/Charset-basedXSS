@@ -1,5 +1,5 @@
 <?php
-header("Content-Type: text/html;charset=Shift_JIS");
+header("Content-Type: text/html; charset=Shift_JIS");
 if(isset($_POST['message']) && preg_match("/[%&\"'<>:;\/]{1,}/i", urldecode($_POST['message']))) $_POST['message'] = "<b>Error! - Invalid message</b>";
 if(!isset($_POST['message'])) $_POST['message'] = "XSS Validation partial PHP source code is <b><pre>" . htmlspecialchars(base64_decode("aWYoaXNzZXQoJF9QT1NUWydtZXNzYWdlJ10pICYmIHByZWdfbWF0Y2goIi9bJSZcIic8Pjo7XC9dezEsfS9pIiwgdXJsZGVjb2RlKCRfUE9TVFsnbWVzc2FnZSddKSkpICRfUE9TVFsnbWVzc2FnZSddID0gIjxiPkVycm9yISAtIEludmFsaWQgbWVzc2FnZTwvYj4iOw=="), ENT_QUOTES, 'Shift_JIS') . "</pre></b>";
 ?><!DOCTYPE html>
