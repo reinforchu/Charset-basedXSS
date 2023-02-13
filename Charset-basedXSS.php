@@ -17,23 +17,23 @@ if(!isset($_POST['message'])) $_POST['message'] = "XSS Validation partial PHP so
     <hr>
     <h2>Input your message &gt;</h2>
     <h3>Validation tester: Bypass</h3>
-    <form action="./charset-xss.php" method="post" accept-charset="utf-8">
+    <form action="./Charset-basedXSS.php" method="post" accept-charset="utf-8">
       <input type="text" name="message" value="Game over!" disabled>
       <input type="hidden" name="message" value="Payload has been deleted.">
       <input type="submit" name="button" value="Attack">
     </form>
     <h3>Validation tester: Block</h3>
-    <form action="./charset-xss.php" method="post" accept-charset="utf-8">
+    <form action="./Charset-basedXSS.php" method="post" accept-charset="utf-8">
       <input type="text" name="message" value="&lt;img src=# onerror=alert(1)&gt;">
       <input type="submit" name="button" value="Attack">
     </form>
     <h3>Validation tester: Pass</h3>
-    <form action="./charset-xss.php" method="post" accept-charset="utf-8">
+    <form action="./Charset-basedXSS.php" method="post" accept-charset="utf-8">
       <input type="text" name="message" value="alert(1)">
       <input type="submit" name="button" value="Send">
     </form>
     <h3>Validation tester: Default</h3>
-    <form action="./charset-xss.php" method="post" accept-charset="utf-8">
+    <form action="./Charset-basedXSS.php" method="post" accept-charset="utf-8">
       <input type="text" name="message" value="Dummy" disabled>
       <input type="submit" name="button" value="Clear">
     </form>
